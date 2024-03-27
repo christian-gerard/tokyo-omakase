@@ -23,17 +23,23 @@ def define_page(id, title):
 
 def navigate(page_id):
     global current_page
+
     previous_pages.append(current_page)
     current_page = pages[page_id]
+
+ 
+
 
 def go_back():
     global current_page
 
     if previous_pages:
         current_page = previous_pages.pop()
+
     else:
         print('\nYou are in the home page\n')
 
+    
 
 def draw_page():
     click.clear()
