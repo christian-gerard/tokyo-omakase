@@ -22,7 +22,7 @@ def view_all_restaurants():
         elif choice.lower() == 'n' and page_number < total_pages:
             page_number += 1
         elif choice.lower() == 'x':
-            navigate("restaurants")
+
             break
         else:
             select_restaurant(choice)
@@ -97,7 +97,6 @@ def filter_by_cuisine():
         elif choice.lower() == 'n' and page_number < total_pages:
             page_number += 1
         elif choice.lower() == 'x':
-            navigate("restaurants")
             break
         else:
             select_restaurant(choice)
@@ -176,7 +175,6 @@ def filter_by_location():
         elif choice.lower() == 'n' and page_number < total_pages:
             page_number += 1
         elif choice.lower() == 'x':
-            navigate("restaurants")
             break
         else:
             select_restaurant(choice)
@@ -185,4 +183,3 @@ restaurants_page = define_page("restaurants", "Restaurants")
 restaurants_page.add_option("View All Restaurants", view_all_restaurants)
 restaurants_page.add_option("Filter by Cuisine", filter_by_cuisine)
 restaurants_page.add_option("Filter by Location", filter_by_location)
-restaurants_page.add_option("Back", lambda: navigate("home"))

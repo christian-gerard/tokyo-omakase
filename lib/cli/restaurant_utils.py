@@ -42,14 +42,14 @@ def display_restaurant_details(restaurant):
     click.echo("\nOptions:")
     click.echo("1. View Visits")
     click.echo("2. Add Visit")
-    click.echo("3. Return to Restaurant List")
+    click.echo("x. Return to Restaurant List")
     choice = click.prompt("Enter your choice")
     if choice == "1":
         display_visits(restaurant.id)
     elif choice == "2":
         add_visit(restaurant.id)
-    elif choice == "3":
-        navigate("view_all_restaurants")
+    elif choice == "x":
+        pass
     else:
         click.echo("Invalid choice. Please try again.")
         display_restaurant_details(restaurant)
@@ -75,7 +75,6 @@ def display_visits(restaurant_id):
         click.echo("No visits found.")
     click.echo("\nPress any key to return to the restaurant details.")
     click.getchar()
-    navigate("view_all_restaurants")
 
 def add_visit(restaurant_id):
 
@@ -102,7 +101,6 @@ def add_visit(restaurant_id):
         visit = Visit.create(rating, description, date, user_id, restaurant_id)
         click.echo("Visit added successfully!")
         click.pause()
-        navigate("view_all_restaurants")
     except Exception as e:
         click.echo(f"An error occurred while adding the visit: {str(e)}")
         click.pause()
