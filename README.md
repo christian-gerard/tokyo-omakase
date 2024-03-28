@@ -94,9 +94,33 @@ Same as filter by cuisine, but you can filter the restaurants by location. In To
 7. Minato
 8. Setagaya/Shinagawa
 
+## My Visits
+Currently the only option under my visits is 'View My Visits.' Enter '1' to access the menu and view all the visits that are linked to your user. The visits can be accessed by inputing the corresponding number listed. Once you've selected a visit it will ask if you would like to edit or delete the visit. To exit a visit you can enter 'x'.
+![ScreenRecording2024-03-27at9 43 09PM-ezgif com-video-to-gif-converter](https://github.com/christian-gerard/tokyo-omakase/assets/102694030/c205b67f-5b4c-4fc8-b2d8-69ee74f07198)
+
+### Editing Visits
+Editing visits allows a user to change the rating, date, and description of an already existing visit. The application will prompt a user to answer 3 questions. Ensure that your inputs are within the range and format the app asks for or else it will return an error and start the command line back at the view visit line.
 
 
-## Visits
+### Deleting Visits
+Deleting visits is as easy as entering 'd' into the command line. It will then ask for confirmation. Once this is done you will no longer be able to access the deleted visit so be sure it is the correct visit.
 
-## Users
+## お任せします！　(view a random restaurant)
+This button is saying in Japanese 'I'll leave it to you!' It is a an option that displays one random restaurant you can try in city of Tokyo. If you are having trouble deciding where to go to dinner then leave it to us!!
+![ScreenRecording2024-03-27at9 46 30PM-ezgif com-video-to-gif-converter](https://github.com/christian-gerard/tokyo-omakase/assets/102694030/bd00366a-55e0-4539-a72a-ed0d7ef63ebf)
+
+
+
+## Manage Users
+You are able to view, edit and delete users within the manage users menu. Once you enter you will see all the individual users listed. Select a user to continue...
+![ScreenRecording2024-03-27at9 48 59PM-ezgif com-video-to-gif-converter](https://github.com/christian-gerard/tokyo-omakase/assets/102694030/7d44929d-c538-4ec9-93d0-c1515970bba9)
+
+### Deleting a user
+To delete a user enter 'd' into the command line. If you had selected the user you are currently logged in to it will return a message letting you know that you can not delete that user. If its another user then you will be asked a series of confirmation questions to delete. BE WARNED! The delete users functionality also deletes all visits attached to users. So be sure you want to delete the user before doing so.
+
+### Edit a user
+You can edit a user by entering 'e' into the command line. At this time you are only able to edit the user name. Enter the new name into the command line and hit enter to save. 
+
+
+
 
