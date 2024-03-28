@@ -17,6 +17,7 @@ from cli.pages import (
 from cli.user_account_page import user_account_page
 from cli.restaurants_page import restaurants_page
 from cli.visits_page import visits_page
+from cli.user_account_page import view_user
 from classes.User import User
 from classes.Restaurant import Restaurant
 
@@ -163,6 +164,13 @@ def main():
 
                     User.set_current_user(User.create(new_user))
 
+                    new_users = User.get_all()
+                    user_account_page.clear_options()
+
+                    for user in new_users:
+                        user_account_page.add_option(f'{user.name.title()}', lambda user_id = user.id: view_user(user_id))
+
+
                     print(f'[green]\nNew User \"{new_user}\" created\n\nLogging in...\n[/green]')
                     click.pause()   
                     break
@@ -199,13 +207,11 @@ def main():
                 click.clear()
             
 
-
-
     # Define pages
     home_page = define_page("home", "Home")
     home_page.add_option("Restaurants", lambda: navigate("restaurants"))
+    home_page.add_option("お任せします! OMAKASE！", lambda: omakase_restaurant())
     home_page.add_option("My Visits", lambda: navigate("visits"))
-    home_page.add_option("お任せします！ (view a random restaurant)", lambda: omakase_restaurant())
     home_page.add_option("Manage Users", lambda: navigate("user_account"))
 
 

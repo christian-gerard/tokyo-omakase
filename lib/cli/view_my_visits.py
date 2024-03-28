@@ -5,6 +5,7 @@ from cli.pages import navigate
 from classes.User import User
 from classes.Visit import Visit
 from classes.Restaurant import Restaurant
+from cli.pages import go_back
 
 def view_visit(visit_id):
     exit = False
@@ -28,8 +29,8 @@ def view_visit(visit_id):
             if confirmation == 'y':
                 visit.delete()
                 print('\n[red]Visit has been deleted[/red]\n')
-                click.pause()
                 display_my_visits()
+                click.pause()
                 exit = True
             elif confirmation == 'n':
                 print('\n[red]Aborting Delete...[/red]\n')
@@ -104,14 +105,14 @@ def view_visit(visit_id):
 def display_my_visits():
     from cli.visits_page import visits_page
 
-    exit = False
-
     user = User.current_user.visits()
     
+
     if user == []:
         print('\n[red]No Visits Uploaded ... Please upload a visit in the restaurants menu[red]\n')
+        visits_page.clear_options()
+        visits_page.add_option('View My Visits', lambda: display_my_visits())
         click.pause()
-        navigate('visits')
     else:
         visits_page.options = []
 
