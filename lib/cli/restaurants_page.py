@@ -1,4 +1,4 @@
-from cli.pages import define_page, navigate
+from cli.pages import define_page
 from classes.Restaurant import Restaurant
 from cli.restaurant_utils import display_restaurants, select_restaurant
 import click
@@ -22,7 +22,6 @@ def view_all_restaurants():
         elif choice.lower() == 'n' and page_number < total_pages:
             page_number += 1
         elif choice.lower() == 'x':
-
             break
         else:
             select_restaurant(choice)
@@ -76,7 +75,6 @@ def filter_by_cuisine():
             cuisine = 'Tempura'
             break
         elif choice == 'x':
-            navigate("restaurants")
             break
         else:
             print('\nPlease input a valid cuisine\n')
@@ -154,7 +152,6 @@ def filter_by_location():
             location = 'Setagaya/Shinagawa'
             break
         elif choice == 'x':
-            navigate("restaurants")
             break
         else:
             print('\nPlease input a valid location\n')
