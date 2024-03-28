@@ -133,6 +133,7 @@ def main():
 ###############################################''')
         
         print('\n[white]Welcome to[/white] [#FF7EF5]TOKYO OMAKASE [/#FF7EF5]\n')
+        print('\n[white]A comprehensive guide to finest dining in Tokyo[/white]\n')
         print('\n[#FF7EF5]東京のお任せ[/#FF7EF5][white]へようこそ！[/white] \n')
 
         choice = click.prompt('Login or Create New User? (l/n)').lower()
