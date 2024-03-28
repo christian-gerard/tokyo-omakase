@@ -3,6 +3,7 @@ from cli.pages import define_page
 from classes.User import User
 from rich import print
 from rich.prompt import Prompt
+from classes.User import User
 
 exit = False
 
@@ -10,6 +11,8 @@ def view_user(user_id):
     global exit
     exit = False
     chosen_user = User.get_user_by_id(user_id)
+
+
 
     while not exit:
         choice = click.prompt(f'\nEdit or Delete {chosen_user.name}? (e/d/x)').lower()
@@ -49,12 +52,21 @@ def delete_user(chosen_user):
     global exit
 
     while not exit:
+
+        if chosen_user.id == User.current_user.id:
+            print('\n[red]Unable to delete...User is currently logged in[/red]\n')
+            click.pause()
+            exit = True
+        else:
+            break
+
+    while not exit:
         choice = click.prompt(f'\nDelete {chosen_user.name}? (y/n)').lower()
         if choice == 'y':
-            confirmation = Prompt.ask(f'\n[red]Are you sure?[/red] (y/n)').lower()
+            confirmation = Prompt.ask(f'\n[red]Are you sure? This will also delete all visits made by this user.[/red] (y/n)').lower()
             if confirmation == 'y':
                 chosen_user.delete()
-
+                chosen_user.delete_all_visits()
                 user_account_page.clear_options()
                 new_users = User.get_all()
 
