@@ -40,7 +40,7 @@ def display_restaurant_details(restaurant):
     print('\n')
     print("\nOptions:")
     print("[#FF7EF5]1.[/#FF7EF5] View Visits")
-    print("[#FF7EF5]2.[/#FF7EF5] Add Visit")
+    print("[#FF7EF5]2.[/#FF7EF5]Add Visit")
     print("[#FF7EF5]x.[/#FF7EF5] Return to Restaurant List")
     choice = click.prompt("Enter your choice")
     if choice == "1":
