@@ -1,7 +1,6 @@
 import click
 from classes.Restaurant import Restaurant
 from classes.Visit import Visit
-
 from classes.User import User
 from rich import print
 

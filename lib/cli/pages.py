@@ -27,7 +27,6 @@ def navigate(page_id):
     previous_pages.append(current_page)
     current_page = pages[page_id]
 
- 
 
 
 def go_back():

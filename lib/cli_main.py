@@ -2,7 +2,6 @@ import click
 from rich import print
 from rich.prompt import Prompt
 import random
-
 from cli.pages import (
     define_page,
     navigate,
@@ -174,7 +173,7 @@ def main():
     def omakase_restaurant():
         click.clear()
         rest_length = len(Restaurant.get_all())
-        randomizer = random.randint(0,rest_length)
+        randomizer = random.randint(1,rest_length)
 
         random_restaurant = Restaurant.get_by_id(randomizer)
 
