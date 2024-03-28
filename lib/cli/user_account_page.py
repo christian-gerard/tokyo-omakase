@@ -1,5 +1,5 @@
 import click
-from cli.pages import define_page, navigate
+from cli.pages import define_page
 from classes.User import User
 from rich import print
 from rich.prompt import Prompt
