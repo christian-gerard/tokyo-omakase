@@ -12,11 +12,13 @@ def view_user(user_id):
     chosen_user = User.get_user_by_id(user_id)
 
     while not exit:
-        choice = click.prompt(f'\nEdit or Delete {chosen_user.name}? (e/d)').lower()
+        choice = click.prompt(f'\nEdit or Delete {chosen_user.name}? (e/d/x)').lower()
         if choice == 'd':
             delete_user(chosen_user)
         elif choice == 'e':
             edit_user(chosen_user)
+            break
+        elif choice == 'x':
             break
         else:
             print('\n[red]Please enter a valid option[/red]\n')
@@ -25,7 +27,7 @@ def edit_user(chosen_user):
     global exit
 
     while not exit:
-        choice = click.prompt(f'\nEnter a new name for {chosen_user.name}')
+        choice = click.prompt(f'\nEnter a new name for {chosen_user.name}').lower()
         if not (len(choice) <= 12 and len(choice) >= 1) :
             print('\n[red]Please enter a valid input between 1 and 12[/red]\n')
         else:
@@ -36,7 +38,7 @@ def edit_user(chosen_user):
             new_users = User.get_all()
 
             for user in new_users:
-                user_account_page.add_option(f'{user.name}', lambda user_id = user.id: view_user(user_id))
+                user_account_page.add_option(f'{user.name.title()}', lambda user_id = user.id: view_user(user_id))
 
             print(f'\n[green]Update Successful[/green]\n')
 
@@ -47,9 +49,9 @@ def delete_user(chosen_user):
     global exit
 
     while not exit:
-        choice = click.prompt(f'\nDelete {chosen_user.name}? (y/n)')
+        choice = click.prompt(f'\nDelete {chosen_user.name}? (y/n)').lower()
         if choice == 'y':
-            confirmation = Prompt.ask(f'\n[red]Are you sure?[/red] (y/n)')
+            confirmation = Prompt.ask(f'\n[red]Are you sure?[/red] (y/n)').lower()
             if confirmation == 'y':
                 chosen_user.delete()
 
@@ -57,7 +59,7 @@ def delete_user(chosen_user):
                 new_users = User.get_all()
 
                 for user in new_users:
-                    user_account_page.add_option(f'{user.name}', lambda user_id = user.id: view_user(user_id))
+                    user_account_page.add_option(f'{user.name.title()}', lambda user_id = user.id: view_user(user_id))
 
                 print(f'\n[green]{chosen_user.name} was successfully deleted[/green]\n')
                 click.pause()
@@ -82,6 +84,6 @@ user_account_page = define_page("user_account", "Manage User Accounts")
 users = User.get_all()
 
 for user in users:
-    user_account_page.add_option(f'{user.name}', lambda user_id = user.id: view_user(user_id))
+    user_account_page.add_option(f'{user.name.title()}', lambda user_id = user.id: view_user(user_id))
 
 

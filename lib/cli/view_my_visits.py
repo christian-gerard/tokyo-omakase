@@ -22,9 +22,9 @@ def view_visit(visit_id):
 
     while not exit:
 
-        choice = click.prompt(f'Edit or Delete visit? (d/e/x)')
+        choice = click.prompt(f'Edit or Delete visit? (d/e/x)').lower()
         if choice == 'd':
-            confirmation = click.prompt('\nAre you sure you want to delete this visit? (y/n)')
+            confirmation = click.prompt('\nAre you sure you want to delete this visit? (y/n)').lower()
             if confirmation == 'y':
                 visit.delete()
                 print('\n[red]Visit has been deleted[/red]\n')
@@ -37,6 +37,8 @@ def view_visit(visit_id):
                 exit = True
             else:
                 print('\n[red]Please use a valid input[/red]\n')
+                click.pause()
+                print('\n')
         elif choice == 'e':
 
             edit_choice = click.prompt('\nWhat would you like to change? (1. Rating, 2. Date, 3. Description)')
@@ -52,6 +54,8 @@ def view_visit(visit_id):
                     exit = True
                 except ValueError:
                     print('\n[red]Please enter a valid rating between 1 and 10[/red]\n')
+                    click.pause()
+                    print('\n')
 
             elif edit_choice == '2':
                 try:
@@ -63,7 +67,9 @@ def view_visit(visit_id):
                     display_my_visits()
                     exit = True
                 except ValueError:
-                    print('\n[red]Please enter a valid date with the \'MM-DD-YYYY\' format and [/red]\n')
+                    print('\n[red]Please enter a valid date with the \'MM-DD-YYYY\' format[/red]\n')
+                    click.pause()
+                    print('\n')
                 
             elif edit_choice == '3':
                 try:
@@ -76,12 +82,19 @@ def view_visit(visit_id):
                     exit = True
                 except ValueError:
                     print('\n[red]Please enter a description under 100 characters[/red]\n')
+                    click.pause()
+                    print('\n')
             else:
                 print('\n[red]Please use a valid input[/red]\n')
-        elif choice == 'x':
+                click.pause()
+                print('\n')
+        elif choice.lower() == 'x':
             exit = True
         else:
             print('\n[red]Please use a valid input[red]\n')
+            click.pause()
+            print('\n')
+
 
 
 

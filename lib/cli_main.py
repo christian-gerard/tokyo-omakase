@@ -138,7 +138,7 @@ def main():
         choice = click.prompt('Login or Create New User? (l/n)').lower()
 
         if choice == 'l':
-            login_name = click.prompt('\nEnter User Name')
+            login_name = click.prompt('\nEnter User Name').lower()
             if login_name in current_users:
                 User.set_current_user(User.get_user_by_name(login_name))
   
@@ -150,7 +150,7 @@ def main():
                 click.pause()
 
         elif choice == 'n':
-            new_user = click.prompt('\nEnter New User Name')
+            new_user = click.prompt('\nEnter New User Name').lower()
             if new_user in current_users:
                 print('[red]\n\nName already in use...\n\nPlease pick a different name\n\n[/red]')
                 click.pause()
@@ -190,7 +190,7 @@ def main():
             print('[white]=[/white]' * 20)
             print('\n')
 
-            choice = Prompt.ask('Press \'x\' to return home')
+            choice = Prompt.ask('Press \'x\' to return home').lower()
             if choice == 'x':
                 navigate('home')
                 break
