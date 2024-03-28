@@ -56,6 +56,7 @@ From the Restaurant List, you can navigate to a specific restaurant by typing it
 
 ## My Visits
 Currently the only option under my visits is 'View My Visits.' Enter '1' to access the menu and view all the visits that are linked to your user. The visits can be accessed by inputing the corresponding number listed. Once you've selected a visit it will ask if you would like to edit or delete the visit. To exit a visit you can enter 'x'.
+
 ![ScreenRecording2024-03-27at9 43 09PM-ezgif com-video-to-gif-converter](https://github.com/christian-gerard/tokyo-omakase/assets/102694030/c205b67f-5b4c-4fc8-b2d8-69ee74f07198)
 
 ### Editing Visits
@@ -67,12 +68,14 @@ Deleting visits is as easy as entering 'd' into the command line. It will then a
 
 ## お任せします！　(view a random restaurant)
 This button is saying in Japanese 'I'll leave it to you!' It is a an option that displays one random restaurant you can try in city of Tokyo. If you are having trouble deciding where to go to dinner then leave it to us!!
+
 ![ScreenRecording2024-03-27at9 46 30PM-ezgif com-video-to-gif-converter](https://github.com/christian-gerard/tokyo-omakase/assets/102694030/bd00366a-55e0-4539-a72a-ed0d7ef63ebf)
 
 
 
 ## Manage Users
 You are able to view, edit and delete users within the manage users menu. Once you enter you will see all the individual users listed. Select a user to continue...
+
 ![ScreenRecording2024-03-27at9 48 59PM-ezgif com-video-to-gif-converter](https://github.com/christian-gerard/tokyo-omakase/assets/102694030/7d44929d-c538-4ec9-93d0-c1515970bba9)
 
 ### Deleting a user
