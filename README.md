@@ -21,6 +21,8 @@ After logging in, you will be prompted to either login or create a new account.
 ### Login
 To login to an existing account, enter 'l' and press enter. It will then prompt you to 'Enter User Name', enter in your username (including capitalization) and hit enter. If your account does not exist you will be prompted to choose between login and creating a user.
 
+
+
 ### Create a New User
 To create anew user, enter 'n' and press enter. It will then prompt you to 'Enter New User Name', enter in your username an hit enter. 
 
@@ -37,66 +39,23 @@ The home page has 3 options available for you to choose...
 In this application, you can navigate to different menus by entering the corresponding menu number and hitting enter. You can go back in the directory by entering 'x' and hitting enter. By entering 'q' and hitting enter you can exit the entire program. At some points the application will prompt you with different commands, those will be available on the command line.
 
 ## Restaurants
-Tokyo Omakase comes preloaded with 200+ Michellin rated restaurants that you can browse. There are 3 different ways to browse the restaurants...
+Tokyo Omakase comes preloaded with nearly 200 Michellin rated restaurants that you can browse. There are 3 different ways to browse the restaurants...
 
-1. View All Restaurants
-2. Filter By Cuisine
-3. Filter By Location
+Browse through our entire catalog with View All Restaurants.
+![image](https://github.com/christian-gerard/tokyo-omakase/assets/12631152/85fd274a-137d-4c45-bc5b-8a234726c1cd)
 
-All of these options have the ability to view restaurant details, view its visits, and add your own visit.
+Looking for a particular type of food? Filter by Cuisine to find the perfect restaurant to satisfy your craving.
+![image](https://github.com/christian-gerard/tokyo-omakase/assets/12631152/15b1b7f0-839d-4a15-8231-d52881e0258c)
 
-### View All
-View all allows a user to see all of the restaurants in one place. To navigate through pages enter 'n' for next OR 'p' for previous. Once you found a restaurant you would like to view, enter in the corresponding number and hit enter. This will display the restaurant details and options to...
+Need to find something close by? Filter By Location, to find the highest quality restaurants near you!
+![image](https://github.com/christian-gerard/tokyo-omakase/assets/12631152/fc4e6bbf-57c9-4e48-8c43-a08672a10e7d)
 
-1. View Visits
-2. Add Visit
+From the Restaurant List, you can navigate to a specific restaurant by typing its ID# from the left. This allows you to see additional details about the restaurant as well as see other user's visits or add one of your own.
 
-#### View Visits
-View visits will display all of the stored visits about the restaurant. Details include...
-
-1. User name
-2. Description
-3. Rating
-4. Date
-
-These visits allow users to express their sentiment towards their visit and leave any comments about dishes etc.
-
-#### Add Visit
-
-Add Visit allows a user to share their own experience with other users. You will be prompted with a series of questions about rating, description, and the date you went. 
-
-After submitting you can view the same restaurant and check your own visit along with the others.
-
-
-### Filter By Cuisine
-
-Just like view all, filter by cuisine has the same restaurant viewer and visit functionality EXCEPT before viewing the restaurants you can choose to filter the restaurant list by a certain cuisine type...
-
-1. Chinese
-2. French
-3. Hispanic
-4. Italian
-5. Japanese
-6. Sushi
-7. Tempura
-
-
-### Filter By Location
-
-Same as filter by cuisine, but you can filter the restaurants by location. In Tokyo, the city is split up into districts that they call wards. There are many wards but some have more restaurants than others. We created the following categories to encapsulate the best locations for dining in tokyo and represent relative geographic area...
-
-1. Shibuya
-2. Shinjuku
-3. Bunkyo/Sumida/Taito
-4. Chiyoda
-5. Chuo
-6. Meguro
-7. Minato
-8. Setagaya/Shinagawa
+![restaurant_gif](https://github.com/christian-gerard/tokyo-omakase/assets/12631152/2fb03765-130f-4b07-9978-63114b2149f3)
 
 
 
-## Visits
 
 ## Users
 
