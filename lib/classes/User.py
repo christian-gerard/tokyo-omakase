@@ -1,4 +1,5 @@
 from . import CURSOR, CONN
+import click
 from classes.Visit import Visit
 
 
@@ -111,7 +112,18 @@ class User:
             raise Exception
 
 
-        
+    def delete_all_visits(self):
+        sql = ''' 
+            DELETE FROM visits
+            WHERE user_id = ?
+        '''
+        try:
+            CURSOR.execute(sql, (self.id,))
+            CONN.commit()
+        except Exception as e:
+            CONN.rollback()
+            print('An Error Occurred:', e)
+            raise Exception
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
