@@ -1,12 +1,19 @@
 # Tokyo Omakase 東京のお任せ
 
-Tokyo Omakase is your guide to Tokyo's best restaurants. You can do the following 
+Tokyo Omakase is your guide to Tokyo's best restaurants.
 
 ## Install and Run
+Clone down our repository and then navigate into the directory in your terminal and run the following commands:
 
-
+```
+pipenv install
+pipenv shell
+```
 This creates an environment to control dependencies
-
+```
+python lib/seed.py
+```
+This seeds the database with our starter data.
 ```
 python lib/cli_main.py
 ```
@@ -16,7 +23,7 @@ Run Tokyo Omakase
 
 ## Welcome Page
 
-After logging in, you will be prompted to either login or create a new account. 
+After starting the program, you will be prompted to either login or create a new account. 
 
 ### Login
 To login to an existing account, enter 'l' and press enter. It will then prompt you to 'Enter User Name', enter in your username (including capitalization) and hit enter. If your account does not exist you will be prompted to choose between login and creating a user.
@@ -24,7 +31,7 @@ To login to an existing account, enter 'l' and press enter. It will then prompt 
 
 
 ### Create a New User
-To create anew user, enter 'n' and press enter. It will then prompt you to 'Enter New User Name', enter in your username an hit enter. 
+To create a new user, enter 'n' and press enter. It will then prompt you to 'Enter New User Name', enter in your username an hit enter. 
 
 ![Login](readme_img/login.png)
 
