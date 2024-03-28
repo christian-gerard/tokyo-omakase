@@ -3,7 +3,6 @@ from cli.pages import define_page
 from classes.User import User
 from rich import print
 from rich.prompt import Prompt
-from classes.User import User
 
 exit = False
 

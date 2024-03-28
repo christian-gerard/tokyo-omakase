@@ -47,7 +47,7 @@ def seed_database(csv_file):
     Visit.create(7, 'BEST IN TOWN', '02-28-2022', 3, 4)
     Visit.create(8, 'Great Service', '03-20-2023', 3, 5)
     Visit.create(9, 'Best Restaurant in town', '01-26-2020', 3, 6)
-    Visit.create(8, 'Shai Halut would approve', '02-28-2022', 4, 4)
+    Visit.create(8, 'Shai Hulud would approve', '02-28-2022', 4, 4)
     Visit.create(3, 'Bad service is the rating killer', '03-20-2023', 4, 5)
     Visit.create(5, 'Voice from the deep says ITS AIGHT', '01-26-2020', 4, 6)
 

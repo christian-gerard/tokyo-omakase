@@ -3,7 +3,6 @@ from classes.Restaurant import Restaurant
 from cli.restaurant_utils import display_restaurants, select_restaurant
 import click
 from rich import print
-import click
 
 def view_all_restaurants():
     page_number = 1
@@ -73,8 +72,6 @@ def filter_by_cuisine():
             break
         elif choice == 'tempura' or choice == '7':
             cuisine = 'Tempura'
-            break
-        elif choice == 'x':
             break
         else:
             print('\nPlease input a valid cuisine\n')
@@ -150,8 +147,6 @@ def filter_by_location():
             break
         elif choice == 'setagaya/shinagawa' or choice == '8':
             location = 'Setagaya/Shinagawa'
-            break
-        elif choice == 'x':
             break
         else:
             print('\nPlease input a valid location\n')
