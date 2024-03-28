@@ -92,5 +92,7 @@ To delete a user enter 'd' into the command line. If you had selected the user y
 You can edit a user by entering 'e' into the command line. At this time you are only able to edit the user name. Enter the new name into the command line and hit enter to save. 
 
 
-
+### Contributors
+Christian Gerard
+Sung-Jin Ahn 
 
