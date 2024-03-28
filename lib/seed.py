@@ -19,10 +19,10 @@ def seed_database(csv_file):
         for instance in data:
             instance.save()
 
-    christian = User.create('Christian')
-    sungjin = User.create('Sungjin')
-    matteo = User.create('Matteo')
-    paul_a = User.create('Paul A')
+    christian = User.create('christian')
+    sungjin = User.create('sungjin')
+    matteo = User.create('matteo')
+    paul_a = User.create('paul A')
 
 
     Visit.create(8, 'Loved this place!!', '04-30-2023', 1, 1)

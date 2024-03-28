@@ -3,6 +3,7 @@ from classes.Restaurant import Restaurant
 from classes.Visit import Visit
 from cli.pages import navigate
 from classes.User import User
+from rich import print
 
 def display_restaurants(restaurants, page_number, total_restaurants, total_pages):
     click.clear()
@@ -48,7 +49,7 @@ def display_restaurant_details(restaurant):
         display_visits(restaurant.id)
     elif choice == "2":
         add_visit(restaurant.id)
-    elif choice == "x":
+    elif choice.lower() == "x":
         pass
     else:
         click.echo("Invalid choice. Please try again.")
@@ -99,8 +100,8 @@ def add_visit(restaurant_id):
 
     try:
         visit = Visit.create(rating, description, date, user_id, restaurant_id)
-        click.echo("Visit added successfully!")
+        print("\n[green]Visit added successfully![/green]\n")
         click.pause()
     except Exception as e:
-        click.echo(f"An error occurred while adding the visit: {str(e)}")
+        print(f"\n[red]An error occurred while adding the visit: {str(e)}[/red]\n")
         click.pause()
